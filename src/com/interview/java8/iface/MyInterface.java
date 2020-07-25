@@ -17,4 +17,12 @@ public interface MyInterface {
 	}
 	
 	public abstract Student getYoungestStudent (List <Student> studentList);
+	
+	public default boolean equals (Student s1 , Student s2) {
+		return (s1.getName().equals(s2.getName()) && s1.getAge() == s2.getAge());
+	}
+	
+	public default boolean equals (Student s2) {
+		return true;
+	}
 }
