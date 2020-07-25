@@ -7,12 +7,12 @@ public class LambdaExpression {
 		threadUsingLambda();
 	}
 
-	private static void threadUsingLambda() {
+	private static void threadUsingAnonymous() {
 		Runnable r = new Runnable() {
 
 			@Override
 			public void run() {
-				System.out.println("Thread Using ANonymous Class");
+				System.out.println("Thread Using Anonymous Class");
 
 			}
 		};
@@ -21,7 +21,7 @@ public class LambdaExpression {
 		thread.start();
 	}
 
-	private static void threadUsingAnonymous() {
+	private static void threadUsingLambda() {
 		Runnable r = () -> System.out.println("Thread Using Lambda Expression");
 	
 		Thread thread = new Thread(r);

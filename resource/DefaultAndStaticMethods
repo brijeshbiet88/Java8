@@ -9,3 +9,8 @@ Interface default methods help in extending interfaces without having the fear o
 Interfaces can not have default methods with same signature of object class (e.g. equals and hashcode)
 However it can have overloaded methods   
 
+A new package java.util.Function has been added with bunch of functional interfaces to provide target types for lambda 
+expressions and method references.
+
+The interface can also declare the abstracts methods from the java.lang.Object class but still the interface can be called
+as Functional Interface. For example Comparator interface declares equals method.
