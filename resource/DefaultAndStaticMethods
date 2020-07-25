@@ -1,7 +1,8 @@
 
 Default methods enable to add new functionality to the interfaces of your libraries and ensure binary compatibility 
 with code written for older versions of those interfaces. to developers will not be forced to implement default methods
-
+For example : Iterable interface which is implemented by Collection classes was provided default foreach method
+with forcing the Collection classes to implement these methods
 
 Interface default methods help in extending interfaces without having the fear of breaking implementation classes.
 
