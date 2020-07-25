@@ -30,6 +30,14 @@ public class MyInterfaceImple implements MyInterface{
 		System.out.println("Are Equal ? s3 and s4 : "+myInterfaceImple.equals(s3, s4));
 		
 		System.out.println("Equals Test s3 : "+myInterfaceImple.equals(s3));
+		
+		
+		System.out.println("----------------Sort Students On Age ---------------");
+		
+		myInterfaceImple.sortStudents(list);
+		list.forEach(student -> 
+		System.out.println("Age : " +student.getAge()+" Name : "+student.getName())
+		);
 	}
 
 	@Override
@@ -38,3 +46,17 @@ public class MyInterfaceImple implements MyInterface{
 	}
 
 }
+/*
+ Youngest Student
+Name : Rajat ,Age : 23
+Are Equal ? s1 and s2 : false
+Are Equal ? s3 and s4 : true
+Equals Test s3 : true
+----------------Sort Students On Age ---------------
+Age : 23 Name : Rajat
+Age : 27 Name : Munna
+Age : 27 Name : Munna
+Age : 30 Name : Corkit
+
+ * */
+ */

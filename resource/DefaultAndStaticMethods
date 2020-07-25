@@ -1,0 +1,10 @@
+
+Default methods enable to add new functionality to the interfaces of your libraries and ensure binary compatibility 
+with code written for older versions of those interfaces. to developers will not be forced to implement default methods
+
+
+Interface default methods help in extending interfaces without having the fear of breaking implementation classes.
+
+Interfaces can not have default methods with same signature of object class (e.g. equals and hashcode)
+However it can have overloaded methods   
+
