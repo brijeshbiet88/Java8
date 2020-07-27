@@ -2,6 +2,7 @@ package com.interview.java8.impl;
 
 import com.interview.java8.iface.MyInterface1;
 import com.interview.java8.iface.MyInterface2;
+import com.interview.java8.iface.MyInterface3;
 
 public class Lambda1 {
 
@@ -28,6 +29,9 @@ public class Lambda1 {
 		System.out.println("----------------------------------------------------------");
 		myInterface2.displayInfo("Sharad", "Balrampur", 19);
 		System.out.println("----------------------------------------------------------");
+		
+		MyInterface3 myInterface3 = ()-> System.out.println("Testing Lambda Expression");
+		myInterface3.test();
 	}
 
 }
