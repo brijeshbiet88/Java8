@@ -14,3 +14,10 @@ expressions and method references.
 
 The interface can also declare the abstracts methods from the java.lang.Object class but still the interface can be called
 as Functional Interface. For example Comparator interface declares equals method.
+
+Lambda expressions are Java's first step into functional programming . A Java lambda expression is thus a function which
+can be created without belonging to any class. A Lambda expression can be passed around as if it was an object and
+executed on demand.
+
+A Lambda expression is characterized by following syntax
+parameter -> Method body
