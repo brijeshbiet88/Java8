@@ -14,12 +14,11 @@ public class IterateListAndSet {
 		Student s1 = new Student("Rajat", 22);
 		Student s2 = new Student("Sharad", 19);
 		Student s3 = new Student("Monty", 27);
-		Student s4 = new Student("Brijesh", 30);
 		
 		List<Student> list = new ArrayList<>();
-		list.add(s1);list.add(s2);list.add(s3);list.add(s4);
+		list.add(s1);list.add(s2);list.add(s3);
 		Set<Student> set = new HashSet<>();
-		set.add(s1);set.add(s2);set.add(s3);set.add(s4);
+		set.add(s1);set.add(s2);set.add(s3);
 		
 		System.out.println("------Iterate List 1-------");
 		list.forEach(new MyConsumer());
@@ -29,11 +28,12 @@ public class IterateListAndSet {
 		list.forEach(s->System.out.println("name :"+s.getName()+"	age:"+s.getAge()));
 		System.out.println("------Iterate Set 2-------");
 		set.forEach(s->System.out.println("name :"+s.getName()+"	age:"+s.getAge()));
+		System.out.println("------Iterate List 3-------");
+		list.forEach(System.out::println);
+		System.out.println("------Iterate Set 3-------");
+		set.forEach(System.out::println);
 		
 	}
-
-	
-
 	
 }
 
