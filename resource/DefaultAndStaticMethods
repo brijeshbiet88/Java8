@@ -34,3 +34,8 @@ default void forEach(Consumer<? super T> action) {
         }
     }
     Stream interface also has foreach method 
+    
+Type Inference : is a compilers ability to look at each method invocation and corresponding declaration to determine
+the type arguments  that make the invocation applicable.The inference algorithm determines the type of arguments and
+return types
+
