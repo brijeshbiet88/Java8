@@ -25,3 +25,12 @@ parameter -> Method body
 Lambda expressions
 Zero parameter: ()->{method body};
 One parameter: (name)->{method body}; or name->{method body}; or  (String name)->{method body};
+
+foreach is default method of Iterable inteface
+default void forEach(Consumer<? super T> action) {
+        Objects.requireNonNull(action);
+        for (T t : this) {
+            action.accept(t);
+        }
+    }
+    Stream interface also has foreach method 
