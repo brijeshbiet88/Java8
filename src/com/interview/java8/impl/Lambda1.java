@@ -3,6 +3,7 @@ package com.interview.java8.impl;
 import com.interview.java8.iface.MyInterface1;
 import com.interview.java8.iface.MyInterface2;
 import com.interview.java8.iface.MyInterface3;
+import com.interview.java8.iface.MyInterface4;
 
 public class Lambda1 {
 
@@ -32,6 +33,22 @@ public class Lambda1 {
 		
 		MyInterface3 myInterface3 = ()-> System.out.println("Testing Lambda Expression");
 		myInterface3.test();
+		
+		System.out.println("----------------------------------------------------------");
+		
+		MyInterface4 myInterface4 = (a , b) -> {
+			if(a==b) {
+				System.out.println(a+" and "+b +" are equal");
+				return true;
+			}
+			else {
+				System.out.println(a+" and "+b +" are not equal");
+				return false;
+			}
+			};
+		myInterface4.areEqual(5 ,  5);
+		System.out.println("----------------------------------------------------------");
+		myInterface4.areEqual(10 ,  5);
 	}
 
 }

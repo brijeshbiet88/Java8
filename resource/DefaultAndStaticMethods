@@ -21,3 +21,7 @@ executed on demand.
 
 A Lambda expression is characterized by following syntax
 parameter -> Method body
+
+Lambda expressions
+Zero parameter: ()->{method body};
+One parameter: (name)->{method body}; or name->{method body}; or  (String name)->{method body};
