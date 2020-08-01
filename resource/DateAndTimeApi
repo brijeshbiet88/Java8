@@ -1,0 +1,10 @@
+jdk 1.8 has added java.time package
+
+Java 8 introduced new Api for Date and Time to overcome shortcomings of Older jav.util.Data and Time Api
+Date and Calendar were not thread safe in Java 7 where as in Java 8 are immutable and thread safe
+
+Api design and understanding is easy
+Timezone handling is easy in java 8
+
+LocalDate : The LocalDate represents a date in ISO format (yyyy-MM-dd) without time.
+It can be used for pay day . Birthday etc.
