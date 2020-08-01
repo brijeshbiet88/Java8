@@ -39,3 +39,14 @@ Type Inference : is a compilers ability to look at each method invocation and co
 the type arguments  that make the invocation applicable.The inference algorithm determines the type of arguments and
 return types
 
+
+Java 8 Lambda Limitations
+
+Lambda expressions (as well as anonymous classes) in Java can only access to the final (or effectively final)
+variables of the enclosing scope.
+
+Java stores function variables (e.g. count) in the stack; those are removed with the termination of createCounter. 
+The created lambdas use copied versions of count. If the compiler allowed the second lambda to change its copied 
+version of count , it would be quite confusing.
+To support this type of closures, Java should save the enclosing scopes in the heap to let them survive after the 
+function's termination
