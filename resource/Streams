@@ -7,3 +7,10 @@ The features of Java stream are –
     Streams don’t change the original data structure, they only provide the result as per the pipelined methods.
     Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate
     operations can be pipelined. Terminal operations mark the end of the stream and return the result.
+    
+Intermediate operations:
+map , flatmap , filter , distinct , sorted , peek , limit , skip
+
+Terminal Operations:
+forEach , toArray , reduce , collect , min , max , count , anyMatch , allMatch 
+noneMatch , findFirst , findAny
