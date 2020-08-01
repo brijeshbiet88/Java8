@@ -8,3 +8,8 @@ Timezone handling is easy in java 8
 
 LocalDate : The LocalDate represents a date in ISO format (yyyy-MM-dd) without time.
 It can be used for pay day . Birthday etc.
+
+Compatibilty With Date and Calendar before Java 8 to Java 8 time API:
+
+Java 8 has added toInstant method to convert Date and Calendar APi to
+new Java8 Date and Time Api
