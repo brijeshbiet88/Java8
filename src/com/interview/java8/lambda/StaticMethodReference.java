@@ -1,11 +1,13 @@
 package com.interview.java8.lambda;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Function;
 
 import com.interview.java8.iface.MyInterface5;
+import com.interview.java8.model.Student;
 
 public class StaticMethodReference {
 
@@ -26,7 +28,35 @@ public class StaticMethodReference {
 		StaticMethodReference staticMethodReference = new StaticMethodReference();
 		names.forEach(staticMethodReference::greet);
 		
+		ArrayList<Student> students = new ArrayList<Student>();
+		Student s1 = new Student("Santosh", 38);
+		Student s2 = new Student("Rupesh", 46);
+		Student s3 = new Student("Dinesh", 48);
 		
+		students.add(s1);students.add(s2);students.add(s3);
+		
+		List<String> studentNames = StaticMethodReference.printStudentNames(students, Student::getName);
+		studentNames.forEach(System.out::println);
+		
+		List<Integer> studentAges = StaticMethodReference.printStudentAges(students, Student::getAge);
+		studentAges.forEach(System.out::println);
+		
+	}
+
+	private static List<Integer> printStudentAges(ArrayList<Student> students, Function<Student, Integer> f) {
+		List<Integer> ages = new ArrayList<Integer>();
+		students.forEach((name)->{
+			ages.add(f.apply(name));
+		});
+		return ages;
+	}
+
+	private static List<String> printStudentNames(ArrayList<Student> students, Function<Student, String> f) {
+		List<String> names = new ArrayList<String>();
+		students.forEach((name)->{
+			names.add(f.apply(name));
+		});
+		return names;
 	}
 
 	private static void printSquare(ArrayList<Integer> list, Function<Integer, Integer> f) {
