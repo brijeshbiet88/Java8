@@ -14,3 +14,22 @@ map , flatmap , filter , distinct , sorted , peek , limit , skip
 Terminal Operations:
 forEach , toArray , reduce , collect , min , max , count , anyMatch , allMatch 
 noneMatch , findFirst , findAny
+
+Stream Creation:
+Stream.empty() is used to create empty stream
+collection.stream(); //set , list 
+Stream.of(array);
+Arrays.stream(arr);
+Arrays.stream(arr , 1 , 3);//length 2
+
+Stream.builder() : 
+when builder is used the desired part should also be specified in the right part of the statement
+otherwise the build method will create an instance of Stream<Object>
+
+Stream<String> streamBuilder = Stream.<String>builder.add("a").add("b").build();
+
+Stream.generate();
+
+Primitive Streams :
+intStream , longStreams , doubleStreams
+using these interfaces alleviates unnecessary auto boxing allows increase productivity
