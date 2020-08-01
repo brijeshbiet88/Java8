@@ -49,6 +49,12 @@ public class CollectorsDemo {
 		});
 		
 		System.out.println("---------------------------------------------");
+		Map<Boolean, List<Student>> partitionBy = students.stream().collect(Collectors.partitioningBy(p->p.getAge() > 20));
+		partitionBy.forEach((k , v)->{
+			System.out.println(k);
+			System.out.println(v);
+		});
+		System.out.println("---------------------------------------------");
 		
 		Double avg = numList.stream().collect(Collectors.averagingDouble(e->e));
 		System.out.println("Average : "+avg);
@@ -89,6 +95,11 @@ Stats : IntSummaryStatistics{count=6, sum=123, min=11, average=20.500000, max=30
 [Student [name=Prajjval, age=11]]
 30
 [Student [name=Brijesh, age=30]]
+---------------------------------------------
+false
+[Student [name=Prajjval, age=11], Student [name=Sharad, age=19], Student [name=Prince, age=19]]
+true
+[Student [name=Brijesh, age=30], Student [name=Rajat, age=22], Student [name=Shubham, age=22]]
 ---------------------------------------------
 Average : 30.0
 joining : [Rajat,Sharad,Brijesh]
