@@ -1,8 +1,10 @@
 package com.interview.java8.streams;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.interview.java8.model.Student;
@@ -27,13 +29,24 @@ public class CollectorsDemo {
 		Student s1 = new Student("Brijesh",30);
 		Student s2 = new Student("Rajat",22);
 		Student s3 = new Student("Prajjval",11);
+		Student s4 = new Student("Shubham",22);
+		Student s5 = new Student("Sharad",19);
+		Student s6 = new Student("Prince",19);
 		students.add(s1);students.add(s2);students.add(s3);
+		students.add(s4);students.add(s5);students.add(s6);
 		students.forEach(System.out::println);
 		
 		System.out.println("---------------------------------------------");
 		
 		IntSummaryStatistics stats = students.stream().collect(Collectors.summarizingInt(s-> s.getAge()));
 		System.out.println("Stats : "+stats);
+		
+		System.out.println("---------------------------------------------");
+		Map<Integer , List<Student>> groupBy = students.stream().collect(Collectors.groupingBy(Student:: getAge));
+		groupBy.forEach((k , v)->{
+			System.out.println(k);
+			System.out.println(v);
+		});
 		
 		System.out.println("---------------------------------------------");
 		
@@ -62,12 +75,23 @@ Brijesh
 Student [name=Brijesh, age=30]
 Student [name=Rajat, age=22]
 Student [name=Prajjval, age=11]
+Student [name=Shubham, age=22]
+Student [name=Sharad, age=19]
+Student [name=Prince, age=19]
 ---------------------------------------------
-Stats : IntSummaryStatistics{count=3, sum=63, min=11, average=21.000000, max=30}
+Stats : IntSummaryStatistics{count=6, sum=123, min=11, average=20.500000, max=30}
+---------------------------------------------
+19
+[Student [name=Sharad, age=19], Student [name=Prince, age=19]]
+22
+[Student [name=Rajat, age=22], Student [name=Shubham, age=22]]
+11
+[Student [name=Prajjval, age=11]]
+30
+[Student [name=Brijesh, age=30]]
 ---------------------------------------------
 Average : 30.0
 joining : [Rajat,Sharad,Brijesh]
 Sum 90
 
- 
 */
