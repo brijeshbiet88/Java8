@@ -1,0 +1,5 @@
+Optional : Java 8 Optional<T> class can help to handle situations where there is a possibility of
+getting the Null Pointer Exceptions.
+It works as a container of for the object of type . It can return value of this object 
+if the object is not null. In case of value null it allows doing some predefined actions
+
