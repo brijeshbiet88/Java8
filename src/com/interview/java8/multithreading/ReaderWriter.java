@@ -14,12 +14,12 @@ public class ReaderWriter {
 		buffer = new boolean[bufferSize];
 		this.currentSize = 0;
 		this.lock = "lock";
-		this.maxReadWrite = 12;
+		this.maxReadWrite = 18;
 		this.currentReadWrite = 0;
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		ReaderWriter readerWriter = new ReaderWriter(6);
+		ReaderWriter readerWriter = new ReaderWriter(2);
 		
 		Thread r1 = new Thread(readerWriter.reader , "Reader-1");
 		Thread r2 = new Thread(readerWriter.reader , "Reader-2");
@@ -96,16 +96,24 @@ public class ReaderWriter {
 /*
 Written to Position 1 By Thread Writer-1
 Written to Position 2 By Thread Writer-1
-Written to Position 3 By Thread Writer-1
-Written to Position 4 By Thread Writer-1
-Written to Position 5 By Thread Writer-1
-Written to Position 6 By Thread Writer-1
-Read From Position 5 By Thread Reader-3
-Read From Position 4 By Thread Reader-3
-Read From Position 3 By Thread Reader-3
-Read From Position 2 By Thread Reader-3
+Read From Position 1 By Thread Reader-3
+Read From Position 0 By Thread Reader-3
+Written to Position 1 By Thread Writer-1
+Written to Position 2 By Thread Writer-1
 Read From Position 1 By Thread Reader-3
 Read From Position 0 By Thread Reader-3
 Written to Position 1 By Thread Writer-3
-CurrentReadWrite : 13
+Written to Position 2 By Thread Writer-3
+Read From Position 1 By Thread Reader-3
+Read From Position 0 By Thread Reader-3
+Written to Position 1 By Thread Writer-3
+Written to Position 2 By Thread Writer-3
+Read From Position 1 By Thread Reader-3
+Read From Position 0 By Thread Reader-3
+Written to Position 1 By Thread Writer-3
+Written to Position 2 By Thread Writer-3
+Read From Position 1 By Thread Reader-3
+CurrentReadWrite : 19
+
+
  */
