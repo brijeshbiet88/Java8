@@ -12,7 +12,13 @@ public class UnaryOperatorDemo {
 		List<Integer> list = Arrays.asList(2 , 4 , 6 , 8, 10);
 		UnaryOperator<Integer> unaryOperator = (num)-> num*num;
 		unaryOperatorFun(unaryOperator , list).forEach(s-> System.out.print(s+" "));
-
+		System.out.println();
+		
+		System.out.println(unaryOperator.apply(12));
+		System.out.println(unaryOperator.apply(14));
+		System.out.println(unaryOperator.apply(16));
+		System.out.println(unaryOperator.apply(18));
+		System.out.println(unaryOperator.apply(20));
 	}
 
 	private static List<Integer> unaryOperatorFun(UnaryOperator<Integer> unaryOperator, List<Integer> list) {
