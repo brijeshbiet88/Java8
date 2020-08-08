@@ -12,3 +12,9 @@ public class ThreadDemo {
 	}
 
 }
+/*
+Thread 1 is running : Thread-R2
+Thread 1 is running : Thread-R1
+
+ */
+ 

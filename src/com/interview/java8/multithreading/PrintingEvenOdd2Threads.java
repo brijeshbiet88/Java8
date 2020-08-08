@@ -57,7 +57,7 @@ public class PrintingEvenOdd2Threads {
 		};
 		
 		Thread one = new Thread(r1 , "Remainder-1");
-		Thread two = new Thread(r2 , "Remainder-2");
+		Thread two = new Thread(r2 , "Remainder-0");
 	
 		one.start();
 		two.start();
@@ -67,3 +67,17 @@ public class PrintingEvenOdd2Threads {
 
 
 }
+/*
+Remainder-0 	10
+Remainder-1 	11
+Remainder-0 	12
+Remainder-1 	13
+Remainder-0 	14
+Remainder-1 	15
+Remainder-0 	16
+Remainder-1 	17
+Remainder-0 	18
+Remainder-1 	19
+Remainder-0 	20
+
+ * */

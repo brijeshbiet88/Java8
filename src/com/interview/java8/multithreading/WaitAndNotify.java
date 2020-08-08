@@ -90,3 +90,22 @@ public class WaitAndNotify {
 	}
 
 }
+/*
+Remainder-0 	15
+Remainder-1 	16
+Remainder-2 	17
+Remainder-0 	18
+Remainder-1 	19
+Remainder-2 	20
+Remainder-0 	21
+Remainder-1 	22
+Remainder-2 	23
+Remainder-0 	24
+Remainder-1 	25
+Remainder-2 	26
+Remainder-0 	27
+Remainder-1 	28
+Remainder-2 	29
+Remainder-0 	30
+
+ * */
