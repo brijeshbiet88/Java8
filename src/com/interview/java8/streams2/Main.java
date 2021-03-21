@@ -134,3 +134,73 @@ public class Main {
   }
 
 }
+
+/*
+ * Filter For Female
+Person [name=Alina Smith, age=33, gender=FEMALE]
+Person [name=Helen White, age=57, gender=FEMALE]
+Person [name=Anna Cook, age=7, gender=FEMALE]
+Person [name=Jennifer Brown, age=120, gender=FEMALE]
+Person [name=Zelda Brown, age=120, gender=FEMALE]
+Person [name=Rosie Wane, age=20, gender=FEMALE]
+Person [name=Michelle Taylor, age=7, gender=FEMALE]
+
+Sorting based on Age and Then Gender 
+Person [name=Jennifer Brown, age=120, gender=FEMALE]
+Person [name=Zelda Brown, age=120, gender=FEMALE]
+Person [name=Jamie Goa, age=99, gender=MALE]
+Person [name=Helen White, age=57, gender=FEMALE]
+Person [name=Alina Smith, age=33, gender=FEMALE]
+Person [name=Antonio, age=22, gender=MALE]
+Person [name=Rosie Wane, age=20, gender=FEMALE]
+Person [name=Alex Boz, age=14, gender=MALE]
+Person [name=Anna Cook, age=7, gender=FEMALE]
+Person [name=Michelle Taylor, age=7, gender=FEMALE]
+
+Whether All matches where age is Greater Than 8
+false
+
+Whether Any match where age is Greater Than 121
+false
+
+Whether None matches where Naame is Antonio
+false
+
+Person With Max Age
+Person [name=Jennifer Brown, age=120, gender=FEMALE]
+
+Person With Min Age
+Person [name=Anna Cook, age=7, gender=FEMALE]
+
+Group By Gender 
+FEMALE
+Person [name=Alina Smith, age=33, gender=FEMALE]
+Person [name=Helen White, age=57, gender=FEMALE]
+Person [name=Anna Cook, age=7, gender=FEMALE]
+Person [name=Jennifer Brown, age=120, gender=FEMALE]
+Person [name=Zelda Brown, age=120, gender=FEMALE]
+Person [name=Rosie Wane, age=20, gender=FEMALE]
+Person [name=Michelle Taylor, age=7, gender=FEMALE]
+
+MALE
+Person [name=Antonio, age=22, gender=MALE]
+Person [name=Alex Boz, age=14, gender=MALE]
+Person [name=Jamie Goa, age=99, gender=MALE]
+
+
+Group By Gender and Average Age
+Gender FEMALE  Average Age 52.0
+
+Gender MALE  Average Age 45.0
+
+
+Group By Gender and Sum Age
+Gender FEMALE  Summation Age 364
+
+Gender MALE  Summation Age 135
+
+
+Optional Demo 
+Jennifer Brown
+
+ * */
