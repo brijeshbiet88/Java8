@@ -16,11 +16,11 @@ public class ReductionAndCollection {
 		System.out.println("Reduction Demo ");
 		System.out.println("----------------------------------");
 		Stream<Integer> stream = numList.stream();
-		int result = stream.reduce(3, (a ,b)-> a+b);
+		int result = stream.reduce(0, (a ,b)-> a+b);
 		System.out.println(result);
 
 		stream = numList.stream();
-		int result2 = stream.reduce(2, (a ,b)-> a*b);
+		int result2 = stream.reduce(1, (a ,b)-> a*b);
 		System.out.println(result2);
 		
 		System.out.println("\nCollection Demo ");

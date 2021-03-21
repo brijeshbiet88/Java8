@@ -6,6 +6,19 @@ public class Car {
 	private String color;
 	private int price;
 	
+	@Override
+	public String toString() {
+		return "Car: [name=" + name + ", color=" + color + ", price=" + price + "]";
+	}
+	public Car() {
+		super();
+	}
+	public Car(String name, String color, int price) {
+		super();
+		this.name = name;
+		this.color = color;
+		this.price = price;
+	}
 	public String getName() {
 		return name;
 	}
