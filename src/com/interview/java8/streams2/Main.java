@@ -2,6 +2,7 @@ package com.interview.java8.streams2;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -107,6 +108,19 @@ public class Main {
             	
             	System.out.println();
         	
+            	 // Group By Gender and Average Age
+                System.out.println("Group By Gender and Summary Age");
+                Map<Gender, IntSummaryStatistics> groupByGenderSummary = people.stream()
+                    .collect(Collectors.groupingBy(Person::getGender ,  Collectors.summarizingInt(Person :: getAge)) );
+
+                	groupByGenderSummary.forEach((gender, people1) -> {
+                	System.out.print("Gender "+gender);
+                	System.out.println("  Summary Age "+people1);
+                	System.out.println();
+                	});
+                	
+                	System.out.println();
+            	
         	
     System.out.println("Optional Demo ");
     Optional<String> oldestFemaleAge = people.stream()
