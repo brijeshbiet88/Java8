@@ -6,14 +6,10 @@ public class Deadlock {
 	static String lock2 = "lock2";
 
 	public static void main(String[] args) {
-		Runnable r1 = new Runnable() {
-
-			@Override
-			public void run() {
-
-				synchronized (lock1) {
+		Runnable r1 = () ->{
+				    synchronized (lock1) {
 					try {
-						Thread.sleep(100);
+						Thread.sleep(1);
 					} catch (InterruptedException e) {
 						System.out.println("Exception "+e.getMessage());
 					}
@@ -21,16 +17,11 @@ public class Deadlock {
 						System.out.println(lock1+" "+lock2);
 					}
 				}
-
-			}
 		};
 
-		Runnable r2 = new Runnable() {
+		Runnable r2 = () -> {
 
-			@Override
-			public void run() {
-
-				synchronized (lock2) {
+					synchronized (lock2) {
 					try {
 						Thread.sleep(100);
 					} catch (InterruptedException e) {
@@ -39,7 +30,6 @@ public class Deadlock {
 					synchronized (lock1) {
 						System.out.println(lock2+" "+lock1);
 					}
-				}
 			}
 		};
 
