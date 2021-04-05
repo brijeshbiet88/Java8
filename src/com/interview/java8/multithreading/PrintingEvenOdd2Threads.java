@@ -8,11 +8,8 @@ public class PrintingEvenOdd2Threads {
 	public static void main(String[] args) {
 		
 		
-		Runnable r1 = new Runnable() {
+		Runnable r1 = () -> {
 			
-			@Override
-			public void run() {
-				
 				while(number <= target) {
 					synchronized (lock) {
 					try {
@@ -27,16 +24,11 @@ public class PrintingEvenOdd2Threads {
 					number++;
 					lock.notifyAll();
 				}
-				
-			}
 			}
 		};
 		
-		Runnable r2 = new Runnable() {
+		Runnable r2 = () ->{
 			
-			@Override
-			public void run() {
-				
 				while(number <= target) {
 					synchronized (lock) {
 					try {
@@ -51,8 +43,6 @@ public class PrintingEvenOdd2Threads {
 					number++;
 					lock.notifyAll();
 				}
-				
-			}
 			}
 		};
 		
